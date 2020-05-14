@@ -17,6 +17,7 @@ function onguess(letter) {
             document.getElementById("letter_" + i).innerHTML = letter;
             noMatches = false;
         }
+
     }
     if(noMatches){
       document.getElementById("wrongguesses").innerHTML += letter + ", ";
@@ -26,4 +27,16 @@ function onguess(letter) {
         location.href = "index.html";
       }
     }
+    getCurrentWord();
+    if(currentWord.toUpperCase() == randomwoord.toUpperCase()){
+      alert("You win!");
+    }
 };
+
+var currentWord
+function getCurrentWord(){
+  currentWord = "";
+  for(i = 0; i < randomwoord.length; i++){
+    currentWord += document.getElementById("letter_" + i).innerHTML;
+  }
+}

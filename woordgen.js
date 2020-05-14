@@ -6,6 +6,7 @@ var randomwoord;
 
 function pickRandom() {
     randomwoord = woordarray[Math.floor(Math.random() * woordarray.length)];
+    console.log(randomwoord);
     printRandom();
 }
 

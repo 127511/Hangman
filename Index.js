@@ -3,7 +3,7 @@ var fouteLetterCount = 0;
 
 $(document).ready(function() {
 
-    $(".LetterB").click(function() {
+    $(".LetterButton").click(function() {
         var letter = $(this).text();
         if (!geradenLetters.includes(letter)) {
             geradenLetters.push(letter);

@@ -53,8 +53,12 @@ $(document).ready(function() {
         if ($("#raadW").val().toUpperCase() == randomwoord.toUpperCase()) {
             alert("You win!");
         } else {
-            alert("Game Over.")
-            location.href = "index.html";
+            document.getElementById("wrongguesses").innerHTML += $("#raadW").val() + ", ";
+            fouteLetterCount++;
+            if (fouteLetterCount == 5) {
+                alert("Game Over.")
+                location.href = "index.html";
+            }
         }
     });
 

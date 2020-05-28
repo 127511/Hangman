@@ -1,7 +1,8 @@
 var geradenLetters = [" "];
-var fouteLetterCount = 0;
+var fouteLetterCount = 5;
 
 $(document).ready(function() {
+    document.getElementById("chancesleft").innerHTML = fouteLetterCount + " kansen over.";
 
     $(".LetterButton").click(function() {
         var letter = $(this).text();
@@ -24,8 +25,9 @@ $(document).ready(function() {
         }
         if (noMatches) {
             document.getElementById("wrongguesses").innerHTML += letter + ", ";
-            fouteLetterCount++;
-            if (fouteLetterCount == 5) {
+            fouteLetterCount--;
+            document.getElementById("chancesleft").innerHTML = fouteLetterCount + " kansen over.";
+            if (fouteLetterCount == 0) {
                 alert("Game Over.")
                 location.href = "index.html";
             }
@@ -54,8 +56,9 @@ $(document).ready(function() {
             alert("You win!");
         } else {
             document.getElementById("wrongguesses").innerHTML += $("#raadW").val() + ", ";
-            fouteLetterCount++;
-            if (fouteLetterCount == 5) {
+            fouteLetterCount--;
+            document.getElementById("chancesleft").innerHTML = fouteLetterCount + " kansen over.";
+            if (fouteLetterCount == 0) {
                 alert("Game Over.")
                 location.href = "index.html";
             }

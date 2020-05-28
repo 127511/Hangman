@@ -1,5 +1,7 @@
 var geradenLetters = [" "];
 var fouteLetterCount = 5;
+$(".win").hide();
+$(".lose").hide();
 
 $(document).ready(function() {
     document.getElementById("chancesleft").innerHTML = fouteLetterCount + " kansen over.";
@@ -26,10 +28,11 @@ $(document).ready(function() {
         if (noMatches) {
             document.getElementById("wrongguesses").innerHTML += letter + ", ";
             fouteLetterCount--;
+            $('.imgbox').css("background-image", "url(/" + fouteLetterCount +".png)");
             document.getElementById("chancesleft").innerHTML = fouteLetterCount + " kansen over.";
             if (fouteLetterCount == 0) {
-                $("#PArea").fadeTo("slow", 0).promise().done(function() {
-                    $('#lose').fadeTo("slow", 1);
+                $("#PArea").fadeOut().promise().done(function() {
+                    $('#lose').fadeIn();
                 });
                 getCurrentWord();
                 if (currentWord.toUpperCase() == randomwoord.toUpperCase()) {
@@ -52,14 +55,18 @@ $(document).ready(function() {
 
             $("#inputR").click(function() {
                 if ($("#raadW").val().toUpperCase() == randomwoord.toUpperCase()) {
-                    alert("You win!");
+                  $("#PArea").fadeOut().promise().done(function() {
+                      $('#win').fadeIn();
+                  });
                 } else {
                     document.getElementById("wrongguesses").innerHTML += $("#raadW").val() + ", ";
                     fouteLetterCount--;
+                    $('.imgbox').css("background-image", "url(/" + fouteLetterCount +".png)");
                     document.getElementById("chancesleft").innerHTML = fouteLetterCount + " kansen over.";
                     if (fouteLetterCount == 0) {
-                        $("#PArea").fadeOut(
-                            $("#lose").fadeIn())
+                      $("#PArea").fadeOut().promise().done(function() {
+                          $('#lose').fadeIn();
+                      });
                     }
                 }
             });

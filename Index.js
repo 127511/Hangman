@@ -28,41 +28,42 @@ $(document).ready(function() {
             fouteLetterCount--;
             document.getElementById("chancesleft").innerHTML = fouteLetterCount + " kansen over.";
             if (fouteLetterCount == 0) {
-                alert("Game Over.")
-                location.href = "index.html";
+                $("#PArea").fadeTo("slow", 0).promise().done(function() {
+                    $('#lose').fadeTo("slow", 1);
+                });
+                getCurrentWord();
+                if (currentWord.toUpperCase() == randomwoord.toUpperCase()) {
+                    alert("You win!");
+                }
+            };
+
+            var currentWord
+
+            function getCurrentWord() {
+                currentWord = "";
+                for (i = 0; i < randomwoord.length; i++) {
+                    currentWord += document.getElementById("letter_" + i).innerHTML;
+                }
             }
-        }
-        getCurrentWord();
-        if (currentWord.toUpperCase() == randomwoord.toUpperCase()) {
-            alert("You win!");
-        }
-    };
 
-    var currentWord
+            $("#rhw").click(function() {
+                $("#raden").fadeTo("slow", 1);
+            });
 
-    function getCurrentWord() {
-        currentWord = "";
-        for (i = 0; i < randomwoord.length; i++) {
-            currentWord += document.getElementById("letter_" + i).innerHTML;
+            $("#inputR").click(function() {
+                if ($("#raadW").val().toUpperCase() == randomwoord.toUpperCase()) {
+                    alert("You win!");
+                } else {
+                    document.getElementById("wrongguesses").innerHTML += $("#raadW").val() + ", ";
+                    fouteLetterCount--;
+                    document.getElementById("chancesleft").innerHTML = fouteLetterCount + " kansen over.";
+                    if (fouteLetterCount == 0) {
+                        $("#PArea").fadeOut(
+                            $("#lose").fadeIn())
+                    }
+                }
+            });
+
         }
     }
-
-    $("#rhw").click(function() {
-        $("#raden").fadeTo("slow", 1);
-    });
-
-    $("#inputR").click(function() {
-        if ($("#raadW").val().toUpperCase() == randomwoord.toUpperCase()) {
-            alert("You win!");
-        } else {
-            document.getElementById("wrongguesses").innerHTML += $("#raadW").val() + ", ";
-            fouteLetterCount--;
-            document.getElementById("chancesleft").innerHTML = fouteLetterCount + " kansen over.";
-            if (fouteLetterCount == 0) {
-                alert("Game Over.")
-                location.href = "index.html";
-            }
-        }
-    });
-
 });

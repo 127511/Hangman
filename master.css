@@ -9,3 +9,11 @@
 .raden {
     opacity: 0;
 }
+
+.win {
+    opacity: 0;
+}
+
+.lose {
+    opacity: 0;
+}

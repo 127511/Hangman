@@ -3,6 +3,15 @@ var fouteLetterCount = 5;
 $(".win").hide();
 $(".lose").hide();
 
+var currentWord
+
+function getCurrentWord() {
+    currentWord = "";
+    for (i = 0; i < randomwoord.length; i++) {
+        currentWord += document.getElementById("letter_" + i).innerHTML;
+    }
+}
+
 $(document).ready(function() {
     document.getElementById("chancesleft").innerHTML = fouteLetterCount + " kansen over.";
 
@@ -23,31 +32,28 @@ $(document).ready(function() {
                 document.getElementById("letter_" + i).innerHTML = letter;
                 noMatches = false;
             }
-
         }
         if (noMatches) {
             document.getElementById("wrongguesses").innerHTML += letter + ", ";
             fouteLetterCount--;
-            $('.imgbox').css("background-image", "url(/" + fouteLetterCount +".png)");
+            $('.imgbox').css("background-image", "url(image/" + fouteLetterCount +".png)");
             document.getElementById("chancesleft").innerHTML = fouteLetterCount + " kansen over.";
             if (fouteLetterCount == 0) {
                 $("#PArea").fadeOut().promise().done(function() {
                     $('#lose').fadeIn();
                 });
+              }
+            }
+
                 getCurrentWord();
                 if (currentWord.toUpperCase() == randomwoord.toUpperCase()) {
-                    alert("You win!");
+                  $("#PArea").fadeOut().promise().done(function() {
+                      $('#win').fadeIn();
+                  });
                 }
-            };
 
-            var currentWord
+          }
 
-            function getCurrentWord() {
-                currentWord = "";
-                for (i = 0; i < randomwoord.length; i++) {
-                    currentWord += document.getElementById("letter_" + i).innerHTML;
-                }
-            }
 
             $("#rhw").click(function() {
                 $("#raden").fadeTo("slow", 1);
@@ -70,7 +76,4 @@ $(document).ready(function() {
                     }
                 }
             });
-
-        }
-    }
-});
+          });

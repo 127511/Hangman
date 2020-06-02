@@ -1,11 +1,100 @@
+body *{
+  border-style: hidden;
+}
 .letterdiv {
     border-bottom: 2px solid black;
     margin: 3px;
     width: 40px;
     height: 40px;
     display: inline-block;
-}
+    vertical-align: bottom;
 
+}
 .raden {
     opacity: 0;
+}
+
+.imgbox {
+height: 300px;
+width:  300px;
+background-size: cover;
+background-repeat: no-repeat;
+}
+.LetterButton {
+  outline:none;
+  box-sizing: content-box;
+	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+	background-color:#2dabf9;
+	border-radius:13px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	font-style:italic;
+	padding:9px 9px;
+	text-decoration:none;
+	text-shadow:2px 2px 2px #263666;
+  margin: 4px;
+  width: 41px;
+  height: 41px;
+}
+.LetterButton:hover {
+  outline:none;
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+	background-color:#0688fa;
+  border-radius:13px;
+
+}
+.LetterButton:active, .LetterButton:focus {
+  outline:none;
+	position:relative;
+	top:1px;
+  border-radius:13px;
+
+}
+#rhw {
+  outline: none;
+  font-size: 20px;
+  width: 500px;
+  height:80px;
+  position: relative;
+  left: 90px;
+}
+#rhw:hover {
+  outline:none;
+	background:linear-gradient(to bottom, lightgray 5%, #586a73 100%);
+	background-color:lightgray;
+  border-radius:13px;
+}
+
+#raadW {
+  height: 32px;
+  width: 400px;
+  border: 1px solid black;
+  border-radius:13px;
+  position: absolute;
+  top: 620px;
+  left: 100px;
+}
+#inputR {
+background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+background-color:#2dabf9;
+position: absolute;
+border-radius:13px;
+border:1px solid #0b0e07;
+display:inline-block;
+cursor:pointer;
+color:#ffffff;
+font-family:Arial;
+font-size:16px;
+font-style:italic;
+padding:9px 9px;
+text-decoration:none;
+text-shadow:2px 2px 2px #263666;
+position: relative;
+margin-left: 500px;
+top: 32px;
+width: auto;
+height: auto;
 }

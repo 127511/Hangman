@@ -74,7 +74,7 @@ background-repeat: no-repeat;
   border: 1px solid black;
   border-radius:13px;
   position: absolute;
-  top: 620px;
+  top: 670px;
   left: 100px;
 }
 #inputR {
@@ -94,7 +94,6 @@ text-decoration:none;
 text-shadow:2px 2px 2px #263666;
 position: relative;
 margin-left: 500px;
-top: 30px;
+top: 60px;
 width: auto;
-height: auto;
-}
+height: auto;60

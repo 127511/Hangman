@@ -67,7 +67,7 @@ $(document).ready(function() {
                 } else {
                     document.getElementById("wrongguesses").innerHTML += $("#raadW").val() + ", ";
                     fouteLetterCount--;
-                    $('.imgbox').css("background-image", "url(/" + fouteLetterCount +".png)");
+                    $('.imgbox').css("background-image", "url(image/" + fouteLetterCount +".png)");
                     document.getElementById("chancesleft").innerHTML = fouteLetterCount + " kansen over.";
                     if (fouteLetterCount == 0) {
                       $("#PArea").fadeOut().promise().done(function() {

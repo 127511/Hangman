@@ -80,7 +80,6 @@ background-repeat: no-repeat;
 #inputR {
 background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
 background-color:#2dabf9;
-position: absolute;
 border-radius:13px;
 border:1px solid #0b0e07;
 display:inline-block;
@@ -94,6 +93,13 @@ text-decoration:none;
 text-shadow:2px 2px 2px #263666;
 position: relative;
 margin-left: 500px;
-top: 60px;
+top: 670px;
 width: auto;
-height: auto;60
+height: auto;
+position: absolute;
+}
+#wrongguesses{
+  border: 2px;
+  height: 30px;
+  margin: 4px;
+}

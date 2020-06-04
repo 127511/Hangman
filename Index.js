@@ -11,7 +11,6 @@ function getCurrentWord() {
         currentWord += document.getElementById("letter_" + i).innerHTML;
     }
 }
-
 $(document).ready(function() {
     document.getElementById("chancesleft").innerHTML = fouteLetterCount + " kansen over.";
 
@@ -39,7 +38,9 @@ $(document).ready(function() {
             $('.imgbox').css("background-image", "url(image/" + fouteLetterCount +".png)");
             document.getElementById("chancesleft").innerHTML = fouteLetterCount + " kansen over.";
             if (fouteLetterCount == 0) {
-                $("#PArea").fadeOut().promise().done(function() {
+                $("#PArea").fadeOut();
+                $("#wrongguesses").fadeOut();
+                $(".imgbox").fadeOut().promise().done(function() {
                     $('#lose').fadeIn();
                 });
               }
@@ -47,7 +48,9 @@ $(document).ready(function() {
 
                 getCurrentWord();
                 if (currentWord.toUpperCase() == randomwoord.toUpperCase()) {
-                  $("#PArea").fadeOut().promise().done(function() {
+                  $("#PArea").fadeOut();
+                  $("#wrongguesses").fadeOut();
+                  $(".imgbox").fadeOut().promise().done(function() {
                       $('#win').fadeIn();
                   });
                 }
@@ -61,7 +64,9 @@ $(document).ready(function() {
 
             $("#inputR").click(function() {
                 if ($("#raadW").val().toUpperCase() == randomwoord.toUpperCase()) {
-                  $("#PArea").fadeOut().promise().done(function() {
+                  $("#PArea").fadeOut();
+                  $("#wrongguesses").fadeOut();
+                  $(".imgbox").fadeOut().promise().done(function() {
                       $('#win').fadeIn();
                   });
                 } else {
@@ -70,7 +75,9 @@ $(document).ready(function() {
                     $('.imgbox').css("background-image", "url(image/" + fouteLetterCount +".png)");
                     document.getElementById("chancesleft").innerHTML = fouteLetterCount + " kansen over.";
                     if (fouteLetterCount == 0) {
-                      $("#PArea").fadeOut().promise().done(function() {
+                      $("#PArea").fadeOut();
+                      $("#wrongguesses").fadeOut();
+                      $(".imgbox").fadeOut().promise().done(function() {
                           $('#lose').fadeIn();
                       });
                     }

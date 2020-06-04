@@ -9,21 +9,23 @@
 </head>
 
 <body onload="pickRandom()">
+    <div class="imgbox">
+        <!-- image of hangman that changes on mistake -->
+        <!-- test -->
+    </div>
 
     <div id="PArea">
-        <div class="imgbox">
-            <!-- image of hangman that changes on mistake -->
-            <!-- test -->
-        </div>
+
+
+        <h1 id="chancesleft">
+        </h1>
 
         <div id="word">
         </div>
 
-        <div id="wrongguesses">
-        </div>
+
         <br>
-        <div id="chancesleft">
-        </div>
+
 
         <div class="keyboard">
             <button type="button" class="LetterButton" name="button">A</button>
@@ -55,6 +57,7 @@
             <button type="button" class="LetterButton" name="button">Z</button>
 
         </div>
+        
 
         <button type="button" id="rhw" name="button">Raad het woord!</button> <br>
 
@@ -62,6 +65,9 @@
             <input type="text" id="raadW">
             <button id="inputR">Submit</button>
         </div>
+    </div>
+    <br>
+    <div id="wrongguesses">
     </div>
 
     <div class="win" id="win">

@@ -1,3 +1,7 @@
+body{
+  text-align: center;
+  background-color: #87CEEC;
+}
 body *{
   border-style: hidden;
 }
@@ -13,19 +17,24 @@ body *{
 .raden {
     opacity: 0;
 }
+#PArea{
 
+  width: 83%;
+  float: right;
+}
 .imgbox {
 height: 300px;
 width:  300px;
+margin: 0;
 background-size: cover;
 background-repeat: no-repeat;
+float: left;
+
 }
 .LetterButton {
   outline:none;
   box-sizing: content-box;
-	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
-	background-color:#2dabf9;
-	border-radius:13px;
+	background-color:#1E90FF;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -34,24 +43,17 @@ background-repeat: no-repeat;
 	font-style:italic;
 	padding:9px 9px;
 	text-decoration:none;
-	text-shadow:2px 2px 2px #263666;
   margin: 4px;
   width: 41px;
   height: 41px;
+  border: 2px solid #6AB9F0;
 }
 .LetterButton:hover {
-  outline:none;
-	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
-	background-color:#0688fa;
-  border-radius:13px;
-
+	background-color:#6AB9F0;
 }
 .LetterButton:active, .LetterButton:focus {
-  outline:none;
 	position:relative;
 	top:1px;
-  border-radius:13px;
-
 }
 #rhw {
   outline: none;
@@ -59,47 +61,40 @@ background-repeat: no-repeat;
   width: 500px;
   height:80px;
   position: relative;
-  left: 90px;
+  background-color:#1E90FF;
+  color:#ffffff;
+  border: 2px solid #6AB9F0;
 }
 #rhw:hover {
-  outline:none;
-	background:linear-gradient(to bottom, lightgray 5%, #586a73 100%);
-	background-color:lightgray;
-  border-radius:13px;
+  background-color:#6AB9F0;
 }
 
 #raadW {
+
   height: 32px;
   width: 400px;
-  border: 1px solid black;
-  border-radius:13px;
-  position: absolute;
-  top: 670px;
-  left: 100px;
+  border: 2px solid #6AB9F0;
+  margin: 3px;
 }
 #inputR {
-background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
-background-color:#2dabf9;
-border-radius:13px;
-border:1px solid #0b0e07;
+background-color:#1E90FF;
+color:#ffffff;
+border: 2px solid #6AB9F0;
 display:inline-block;
 cursor:pointer;
-color:#ffffff;
 font-family:Arial;
 font-size:16px;
 font-style:italic;
 padding:9px 9px;
 text-decoration:none;
-text-shadow:2px 2px 2px #263666;
-position: relative;
-margin-left: 500px;
-top: 670px;
 width: auto;
 height: auto;
-position: absolute;
+margin: 3px;
 }
 #wrongguesses{
-  border: 2px;
   height: 30px;
-  margin: 4px;
+  margin: 0px;
+  float: left;
+  width: 300px;
+  margin-top: 5px;
 }

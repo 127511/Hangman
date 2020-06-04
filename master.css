@@ -98,3 +98,8 @@ margin: 3px;
   width: 300px;
   margin-top: 5px;
 }
+.win button, .lose button{
+  font-size: 20px;
+  width: 500px;
+  height:80px;
+}

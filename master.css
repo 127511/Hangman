@@ -138,3 +138,45 @@ h1 {
   margin: 3px;
 
 }
+#naamveld {
+
+  height: 32px;
+  width: 400px;
+  border: 2px solid #6AB9F0;
+  margin: 3px;
+}
+#naamsubmit {
+background-color:#F3227D;
+color:#ffffff;
+border: 2px solid #0CFBDB;
+display:inline-block;
+cursor:pointer;
+font-family:Arial;
+font-size:16px;
+font-style:italic;
+padding:9px 9px;
+text-decoration:none;
+width: auto;
+height: auto;
+margin: 3px;
+}
+h2 {
+  color: white;
+}
+#highscores {
+  background-color:#F3227D;
+  color:#ffffff;
+  border: 2px solid #0CFBDB;
+  display:inline-block;
+  vertical-align: middle;
+  cursor:pointer;
+  font-family:Arial;
+  font-size:16px;
+  font-style:italic;
+  padding:9px 9px;
+  text-decoration:none;
+  width: auto;
+  height: auto;
+  margin: 3px;
+
+}

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php include "formprocessing.php"; ?>
 <html lang="en" dir="ltr">
 
 <head>
@@ -74,15 +74,22 @@
     <div class="win" id="win">
         <H1>YOU WIN!</H1>
         <br>
-        <button onclick="location.href='play.html'">Play Again</button>
-        <button onclick="location.href='index.html'">Home</button>
+        <button onclick="location.href='play.php'">Play Again</button>
+        <button onclick="location.href='index.php'">Home</button>
+        <br>
+        <h2 id="scorefield">Your score: </h2>
+        <form method="post">
+          <input type="hidden" id="scoreinput" name="score">
+          <input type="text" id="naamveld" name="name" placeholder="Your Name" required>
+          <input type="submit" id="naamsubmit" name="submit" value="Submit score">
+        </form>
     </div>
 
     <div class="lose" id="lose">
         <h1>YOU LOSE</h1>
         <br>
-        <button onclick="location.href='play.html'">Play Again</button>
-        <button onclick="location.href='index.html'">Home</button>
+        <button onclick="location.href='play.php'">Play Again</button>
+        <button onclick="location.href='index.php'">Home</button>
     </div>
 
     <script src="Index.js"></script>

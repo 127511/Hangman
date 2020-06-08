@@ -1,0 +1,28 @@
+body  *{
+  font-family: arial;
+}
+h1 {
+  position: relative;
+  top: 30vh;
+  color: white;
+  font-size: 100px;;
+}
+#play {
+  position: relative;
+  top: 40vh;
+  background-color:#F3227D;
+  color:#ffffff;
+  border: 2px solid #0CFBDB;
+  display:inline-block;
+  vertical-align: middle;
+  cursor:pointer;
+  font-family:Arial;
+  font-size:50px;
+  font-style:italic;
+  padding:9px 9px;
+  text-decoration:none;
+  width: auto;
+  height: auto;
+  margin: 3px;
+
+}

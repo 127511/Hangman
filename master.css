@@ -1,43 +1,47 @@
 body{
   text-align: center;
-  background-color: #87CEEC;
+ background-color: #47406C
 }
 body *{
   border-style: hidden;
+  font-family: arial;
 }
 .letterdiv {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
     margin: 3px;
     width: 40px;
     height: 40px;
     display: inline-block;
     vertical-align: bottom;
+    color: white;
 
 }
 .raden {
     opacity: 0;
 }
-#PArea{
 
-  width: 83%;
-  float: right;
-}
 .imgbox {
+  display: inline-block;
+  border: 2px solid #0CFBDB;
 height: 300px;
 width:  300px;
 margin: 0;
 background-size: cover;
 background-repeat: no-repeat;
-float: left;
+
+}
+#chancesleft{
+  color: white;
+
 
 }
 .LetterButton {
   outline:none;
   box-sizing: content-box;
-	background-color:#1E90FF;
+	background-color:#F3227D;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
+	color:white;
 	font-family:Arial;
 	font-size:19px;
 	font-style:italic;
@@ -46,7 +50,7 @@ float: left;
   margin: 4px;
   width: 41px;
   height: 41px;
-  border: 2px solid #6AB9F0;
+  border: 2px solid #0CFBDB;
 }
 .LetterButton:hover {
 	background-color:#6AB9F0;
@@ -61,9 +65,9 @@ float: left;
   width: 500px;
   height:80px;
   position: relative;
-  background-color:#1E90FF;
+  background-color:#F3227D;
   color:#ffffff;
-  border: 2px solid #6AB9F0;
+  border: 2px solid #0CFBDB;
 }
 #rhw:hover {
   background-color:#6AB9F0;
@@ -77,9 +81,9 @@ float: left;
   margin: 3px;
 }
 #inputR {
-background-color:#1E90FF;
+background-color:#F3227D;
 color:#ffffff;
-border: 2px solid #6AB9F0;
+border: 2px solid #0CFBDB;
 display:inline-block;
 cursor:pointer;
 font-family:Arial;
@@ -92,14 +96,45 @@ height: auto;
 margin: 3px;
 }
 #wrongguesses{
+  display:inline-block;
   height: 30px;
   margin: 0px;
-  float: left;
   width: 300px;
   margin-top: 5px;
+  color: white;
 }
 .win button, .lose button{
-  font-size: 20px;
-  width: 500px;
-  height:80px;
+  background-color:#F3227D;
+  color: white;
+  border: 2px solid #0CFBDB;
+  display:inline-block;
+  cursor:pointer;
+  font-family:Arial;
+  font-size:16px;
+  font-style:italic;
+  padding:9px 9px;
+  text-decoration:none;
+  width: auto;
+  height: auto;
+  margin: 3px;
+}
+h1 {
+  color: white;
+}
+#play {
+  background-color:#F3227D;
+  color:#ffffff;
+  border: 2px solid #0CFBDB;
+  display:inline-block;
+  vertical-align: middle;
+  cursor:pointer;
+  font-family:Arial;
+  font-size:16px;
+  font-style:italic;
+  padding:9px 9px;
+  text-decoration:none;
+  width: auto;
+  height: auto;
+  margin: 3px;
+
 }
